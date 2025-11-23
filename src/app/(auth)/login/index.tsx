@@ -1,32 +1,27 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
-import { useRouter } from "expo-router";
 import styled from "styled-components/native";
 
 import { Footer } from "@components/footer";
 import { FormInput } from "@components/form-input";
 import { FormSubmitButton } from "@components/form-submit-button";
-import { RegisterValidationService } from "@services/validation/RegisterValidationService";
+import { useAuth } from "@contexts/AuthContext";
 import { Highlight } from "@styles/typography";
-import { makeRegisterUser } from "@services/factories/RegisterUserFactory";
+import { LoginValidationService } from "@services/validation/LoginValidationService";
+import { makeLoginUser } from "@services/factories/LoginUserFactory";
 
-export default function Register() {
+export default function Login() {
     const router = useRouter();
-    const [nome, setNome] = useState("");
+    const auth = useAuth();
     const [email, setEmail] = useState("");
-    const [telefone, setTelefone] = useState("");
     const [senha, setSenha] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
-    const handleRegister = async () => {
+    const handleLogin = async () => {
         setErrorMessage("");
 
-        const validation = RegisterValidationService.validateForm({
-            nome,
-            email,
-            telefone,
-            senha,
-        });
+        const validation = LoginValidationService.validateForm({email, senha});
 
         if (!validation.isValid) {
             setErrorMessage(validation.errorMessage);
@@ -34,11 +29,12 @@ export default function Register() {
         }
 
         // Se passou na validação, prosseguir com o cadastro
-        console.log("Cadastrar:", { nome, email, telefone, senha });
+        console.log("Login:", { email, senha });
         try {
-            const registerUser = makeRegisterUser();
-            await registerUser.execute({ nome, email, telefone, senha });
-            router.push("/login" as any);
+            const loginUser = makeLoginUser();
+            const user = await loginUser.execute(email, senha);
+            auth.login(user);
+            router.push("/(drawer)/home");
         } catch (error: any) {
             setErrorMessage(error.message);
         }
@@ -50,59 +46,57 @@ export default function Register() {
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
             >
-                <BannerContainer>
-                    <BannerImage
-                        source={require("@assets/images/layout/bannerRegister.png")}
+                <TopPawContainer>
+                    <TopPawImage
+                        source={require("@assets/images/layout/BackgroundPaw-2.png")}
                         resizeMode="cover"
                     />
-                </BannerContainer>
+                </TopPawContainer>
 
                 <FormContainer>
-                    <Title>Cadastro</Title>
+                    <Title>Login</Title>
 
                     {errorMessage ? (
                         <ErrorMessage>{errorMessage}</ErrorMessage>
                     ) : null}
 
                     <FormInput
-                        label="Nome"
-                        placeholder="Nome"
-                        value={nome}
-                        onChangeText={setNome}
-                    />
-                    <FormInput
                         label="Email"
                         placeholder="seu@melhoremail.com"
                         value={email}
                         onChangeText={setEmail}
-                    />
-                    <FormInput
-                        label="Telefone"
-                        placeholder="27999999999"
-                        value={telefone}
-                        onChangeText={setTelefone}
+                        keyboardType="email-address"
+                        autoCapitalize="none"
                     />
                     <FormInput
                         label="Senha"
-                        placeholder="Nova senha"
+                        placeholder="Sua senha"
                         value={senha}
                         onChangeText={setSenha}
+                        secureTextEntry
                     />
 
                     <FormSubmitButton
-                        title="Cadastrar"
-                        onPress={handleRegister}
+                        title="Entrar"
+                        onPress={handleLogin}
                     />
 
-                    <LoginLinkContainer>
-                        <LoginLinkText>Já possui conta? </LoginLinkText>
+                    <RegisterLinkContainer>
+                        <RegisterLinkText>Não possui conta? </RegisterLinkText>
                         <TouchableOpacity
-                            onPress={() => router.push("/login" as any)}
+                            onPress={() => router.push("/register" as any)}
                         >
-                            <LoginLinkHighlight>Entrar</LoginLinkHighlight>
+                            <RegisterLinkHighlight>Cadastrar</RegisterLinkHighlight>
                         </TouchableOpacity>
-                    </LoginLinkContainer>
+                    </RegisterLinkContainer>
                 </FormContainer>
+
+                <BottomPawContainer>
+                    <BottomPawImage
+                        source={require("@assets/images/layout/backgroundPaw-3.png")}
+                        resizeMode="cover"
+                    />
+                </BottomPawContainer>
             </ScrollView>
             <FooterWrapper>
                 <Footer />
@@ -123,14 +117,27 @@ const FooterWrapper = styled.View`
     width: 100%;
 `;
 
-const BannerContainer = styled.View`
+const TopPawContainer = styled.View`
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+`;
+
+const TopPawImage = styled.Image`
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+`;
+
+const BottomPawContainer = styled.View`
     width: 100%;
     height: 260px;
     overflow: hidden;
 `;
 
-const BannerImage = styled.Image`
+const BottomPawImage = styled.Image`
     width: 100%;
+    max-width: 500px;
     height: 100%;
 `;
 
@@ -143,23 +150,23 @@ const FormContainer = styled.View`
 const Title = styled.Text`
     font-size: 32px;
     font-weight: 600;
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }: { theme: any }) => theme.colors.accent};
     margin-bottom: 5%;
     font-family: sans-serif;
 `;
 
-const LoginLinkContainer = styled.View`
+const RegisterLinkContainer = styled.View`
     flex-direction: row;
     align-items: center;
     justify-content: center;
 `;
 
-const LoginLinkText = styled.Text`
+const RegisterLinkText = styled.Text`
     font-size: 16px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }: { theme: any }) => theme.colors.text};
 `;
 
-const LoginLinkHighlight = styled(Highlight)`
+const RegisterLinkHighlight = styled(Highlight)`
     font-size: 16px;
     font-weight: 600;
 `;
@@ -172,3 +179,4 @@ const ErrorMessage = styled.Text`
     text-align: center;
     font-weight: 600;
 `;
+
