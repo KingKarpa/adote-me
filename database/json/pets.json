@@ -6,7 +6,7 @@
       "animal": "hamster",
       "sex": "female",
       "breed": "Desconhecido",
-      "image": "https://cataas.com/cat"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/1.jpg"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "animal": "cat",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/2.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/2.jpg"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/3.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/3.jpg"
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/4.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/4.jpg"
     },
     {
       "id": 5,
@@ -42,7 +42,7 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/5.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/5.jpg"
     },
     {
       "id": 6,
@@ -51,7 +51,7 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/6.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/6.jpg"
     },
     {
       "id": 7,
@@ -60,7 +60,7 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/7.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/7.jpg"
     },
     {
       "id": 8,
@@ -69,7 +69,7 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Desconhecido",
-      "image": "@assets/images/profile/8.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/8.jpg"
     },
     {
       "id": 9,
@@ -78,7 +78,7 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/9.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/9.jpg"
     },
     {
       "id": 10,
@@ -87,7 +87,7 @@
       "animal": "turtle",
       "sex": "male",
       "breed": "Desconhecido",
-      "image": "@assets/images/profile/10.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/10.jpg"
     },
     {
       "id": 11,
@@ -96,7 +96,7 @@
       "animal": "cat",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/11.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/11.jpg"
     },
     {
       "id": 12,
@@ -105,7 +105,7 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/12.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/12.jpg"
     },
     {
       "id": 13,
@@ -114,6 +114,6 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "@assets/images/profile/13.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/13.jpg"
     }
 ]

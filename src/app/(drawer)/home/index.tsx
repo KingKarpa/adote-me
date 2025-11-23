@@ -38,7 +38,7 @@ export default function Index() {
                 <ContactName>Nícolas Oliveira</ContactName>
                 <ContactRole>Responsável pelo Projeto</ContactRole>
                 <PhotoPlaceholder>
-                    <PhotoText>Foto de Maria</PhotoText>
+                    <PhotoText>Foto</PhotoText>
                 </PhotoPlaceholder>
                 <ContactEmail>adoteme@email.com.br</ContactEmail>
             </ContactCard>
