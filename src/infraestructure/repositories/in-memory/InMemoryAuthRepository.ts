@@ -1,0 +1,15 @@
+import { AuthRepository } from "@domain/repositories/AuthRepository";
+import { User } from "@domain/entities/User";
+
+const db: User[] = [];
+
+export class LocalAuthRepository implements AuthRepository {
+    async register(user: User): Promise<void> {
+        db.push(user);
+        console.log(db);
+    }
+
+    async findByEmail(email: string): Promise<User | null> {
+        return db.find((u) => u.email === email) ?? null;
+    }
+}

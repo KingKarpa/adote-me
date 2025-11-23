@@ -11,7 +11,8 @@
       "@services/*": ["./src/services/*"],
       "@app-types/*": ["./src/types/*"],
       "@domain/*": ["./src/domain/*"],
-      "@infraestructure/*": ["./src/infraestructure/*"]
+      "@infraestructure/*": ["./src/infraestructure/*"],
+      "@contexts/*": ["./src/contexts/*"]
     }
   },
   "include": [

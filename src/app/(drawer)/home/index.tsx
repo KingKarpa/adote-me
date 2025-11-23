@@ -1,7 +1,7 @@
 import { FeaturedPetsCards } from "@/components/featured-pet-cards";
-import { DarkHighlight, LightButton, LightButtonText } from "@/styles/typography";
-import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/navigation-footer";
+import { DarkHighlight, LightButton, LightButtonText } from "@/styles/typography";
 import { Image, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
