@@ -1,0 +1,119 @@
+[
+    {
+      "id": 1,
+      "name": "Luna",
+      "age": 2,
+      "animal": "hamster",
+      "sex": "female",
+      "breed": "Desconhecido",
+      "image": "https://cataas.com/cat"
+    },
+    {
+      "id": 2,
+      "name": "Nino",
+      "age": 1,
+      "animal": "cat",
+      "sex": "male",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Bella",
+      "age": 3,
+      "animal": "cat",
+      "sex": "female",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mia",
+      "age": 2,
+      "animal": "dog",
+      "sex": "female",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Max",
+      "age": 4,
+      "animal": "dog",
+      "sex": "male",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Thor",
+      "age": 6,
+      "animal": "dog",
+      "sex": "male",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Rex",
+      "age": 7,
+      "animal": "dog",
+      "sex": "male",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Eva",
+      "age": 6,
+      "animal": "dog",
+      "sex": "female",
+      "breed": "Desconhecido",
+      "image": "@assets/images/profile/8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Pipoca",
+      "age": 8,
+      "animal": "dog",
+      "sex": "female",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Rafa",
+      "age": 21,
+      "animal": "turtle",
+      "sex": "male",
+      "breed": "Desconhecido",
+      "image": "@assets/images/profile/10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Marcos",
+      "age": 1,
+      "animal": "cat",
+      "sex": "male",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Lara",
+      "age": 4,
+      "animal": "cat",
+      "sex": "female",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Juju",
+      "age": 5,
+      "animal": "cat",
+      "sex": "female",
+      "breed": "Vira-lata",
+      "image": "@assets/images/profile/13.jpg"
+    }
+]
