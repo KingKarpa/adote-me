@@ -4,9 +4,7 @@ import styled from "styled-components/native";
 export function Footer() {
   return (
     <FooterContainer>
-      <SafeAreaView edges={['bottom']} style={{ width: '100%' }}>
         <FooterBar />
-      </SafeAreaView>
     </FooterContainer>
   );
 }

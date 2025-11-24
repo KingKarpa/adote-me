@@ -180,8 +180,8 @@ const InfoRow = styled.View`
 const PhotoContainer = styled.View`
     flex: 1;
     min-width: 150px;
-    max-width: 300px;
-    align-items: center;
+    max-width: 180px;
+    align-items: flex-start;
     justify-content: center;
 `;
 
@@ -214,7 +214,7 @@ const PhotoPlaceholder = styled.View`
 const PetImage = styled.Image`
     width: 100%;
     min-height: 200px;
-    aspect-ratio: 2/3;
+    aspect-ratio: 2/2.5;
     border-radius: 8px;
     border: 2px solid
         ${({ theme }: { theme: DefaultTheme }) => theme.colors.quaternary};

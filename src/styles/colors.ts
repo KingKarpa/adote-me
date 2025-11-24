@@ -7,5 +7,7 @@ export const colors = {
     text: "#000000",
     textLight: "#FFFFFF",
     background: "#FFFFFF",
+    backgroundMain: "#f4efe8",
+    backgroundForm: "#f9f2ec",
 };
   

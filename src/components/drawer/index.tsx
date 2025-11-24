@@ -45,7 +45,6 @@ export function CustomDrawerContent(props: any) {
 
     return (
         <DrawerContainer>
-            <SafeAreaView edges={['top']} style={{ flex: 1 }}>
                 <DrawerHeader>
                     <LogoContainer>
                         <Subtitle>
@@ -65,7 +64,7 @@ export function CustomDrawerContent(props: any) {
                     )}
                 </DrawerHeader>
 
-                <DrawerContentScrollView {...props} contentContainerStyle={{ paddingTop: 0 }}>
+                <DrawerContentScrollView {...props} contentContainerStyle={{ paddingTop: 20 }}>
                     <DrawerItem
                         label="Início"
                         icon={({ color, size }) => (
@@ -137,7 +136,6 @@ export function CustomDrawerContent(props: any) {
                 <DrawerFooter>
                     <FooterText>© 2024 Adote-Me</FooterText>
                 </DrawerFooter>
-            </SafeAreaView>
         </DrawerContainer>
     );
 }

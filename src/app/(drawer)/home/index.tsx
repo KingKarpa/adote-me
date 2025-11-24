@@ -4,7 +4,7 @@ import { Footer } from "@/components/navigation-footer";
 import { DarkHighlight, LightButton, LightButtonText } from "@styles/typography";
 import { useRouter } from "expo-router";
 import { Image, ScrollView } from "react-native";
-import styled from "styled-components/native";
+import styled, { DefaultTheme } from "styled-components/native";
 
 export default function Index() {
     const router = useRouter();
@@ -47,7 +47,7 @@ export default function Index() {
                     />
                     <ContactCard>
                         <ContactName>Nícolas Oliveira</ContactName>
-                        <ContactRole>Responsável pelo Projeto</ContactRole>
+                        <ContactRole>Líder do Projeto</ContactRole>
                         <PhotoPlaceholder>
                             <PhotoText>Foto</PhotoText>
                         </PhotoPlaceholder>
@@ -89,7 +89,7 @@ const FeaturedPetsTitle = styled.View`
 const DividerLine = styled.View`
     width: 90%;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.quaternary};
+    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.quaternary};
     margin-top: 8px;
     margin-bottom: 8px;
     align-self: center;
@@ -97,7 +97,7 @@ const DividerLine = styled.View`
 
 const ContactContainer = styled.View`
     width: 100%;
-    min-height: 250px;
+    min-height: 350px;
     position: relative;
     padding: 16px;
     background-color: transparent;
@@ -106,58 +106,60 @@ const ContactContainer = styled.View`
 const BackgroundPawImage = styled.Image`
     position: absolute;
     top: 0%;
-    left: 5%;
-    width: 90%;
+    left: 0%;
+    width: 100%;
     opacity: 1;
     z-index: 0;
 `;
 
 const ContactCard = styled.View`
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.primary};
     border-radius: 12px;
-    padding: 16px;
+    padding: 24px;
     align-items: center;
     z-index: 1;
     margin: 0 auto;
-    width: 50%;
-    max-width: 180px;
+    width: 70%;
+    max-width: 200px;
+    min-height: 250px;
 `;
 
 const ContactName = styled.Text`
-    font-size: 16px;
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.text};
-    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.text};
+    margin-bottom: 6px;
 `;
 
 const ContactRole = styled.Text`
-    font-size: 65%;
-    color: ${({ theme }) => theme.colors.text};
-    margin-bottom: 12px;
+    font-size: 14px;
+    color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.text};
+    margin-bottom: 16px;
 `;
 
 const PhotoPlaceholder = styled.View`
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    border: 2px solid ${({ theme }) => theme.colors.text};
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.secondary};
+    border: 2px solid ${({ theme }: { theme: DefaultTheme }) => theme.colors.text};
     justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 `;
 
 const PhotoText = styled.Text`
-    color: ${({ theme }) => theme.colors.textLight};
-    font-size: 11px;
+    color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.textLight};
+    font-size: 14px;
 `;
 
 const ContactEmail = styled.Text`
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.text};
 `;
 
 const Container = styled.View`
+    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.backgroundMain};
     flex: 1;
 `;

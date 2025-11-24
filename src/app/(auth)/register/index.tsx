@@ -51,6 +51,7 @@ export default function Register() {
             <ScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
+                style={{ backgroundColor: "transparent" }}
             >
                 <BannerContainer>
                     <BannerImage
@@ -83,12 +84,14 @@ export default function Register() {
                         placeholder="27999999999"
                         value={telefone}
                         onChangeText={setTelefone}
+                        keyboardType="phone-pad"
                     />
                     <FormInput
                         label="Senha"
                         placeholder="Nova senha"
                         value={senha}
                         onChangeText={setSenha}
+                        secureTextEntry
                     />
 
                     <FormSubmitButton
@@ -106,15 +109,14 @@ export default function Register() {
                     </LoginLinkContainer>
                 </FormContainer>
             </ScrollView>
-            <FooterWrapper>
-                <Footer />
-            </FooterWrapper>
+            <Footer />
         </Container>
     );
 }
 
 const Container = styled.View`
     flex: 1;
+    background-color: transparent;
 `;
 
 const FooterWrapper = styled.View`
@@ -137,7 +139,7 @@ const BannerImage = styled.Image`
 `;
 
 const FormContainer = styled.View`
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.backgroundForm};
     padding: 24px 20px;
     align-items: center;
 `;

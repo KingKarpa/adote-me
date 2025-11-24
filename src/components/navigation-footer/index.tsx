@@ -17,7 +17,6 @@ export function Footer() {
 
     return (
         <FooterContainer>
-            <SafeAreaView edges={['bottom']} style={{ width: '100%' }}>
                 <FooterContent>
                     {isInDrawer && (
                         <MenuButton onPress={handleOpenDrawer}>
@@ -25,7 +24,6 @@ export function Footer() {
                         </MenuButton>
                     )}
                 </FooterContent>
-            </SafeAreaView>
         </FooterContainer>
     );
 }
@@ -38,11 +36,12 @@ const FooterContainer = styled.View`
     width: 100%;
     background-color: rgba(210, 180, 140, 0.8);
     z-index: 10;
+    min-height: 90px;
 `;
 
 const FooterContent = styled.View`
     padding: 8px 16px;
-    min-height: 30px;
+    min-height: 24px;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;

@@ -19,13 +19,13 @@ export function Header() {
     );
 
     const loginButton = (
-        <TouchableOpacity onPress={() => router.push("/login" as any)}>
+        <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
             <DarkHighlight>Entrar</DarkHighlight>
         </TouchableOpacity>
     );
 
     const registerButton = (
-        <DarkButton onPress={() => router.push("/register")}>
+        <DarkButton onPress={() => router.push("/(auth)/register")}>
             <DarkButtonText>Cadastre-se</DarkButtonText>
         </DarkButton>
     );

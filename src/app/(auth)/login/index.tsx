@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 
 import { BackButton } from "@components/back-button";
@@ -44,7 +44,7 @@ export default function Login() {
     return (
         <Container>
             <BackButton />
-            <ScrollView
+            <StyledScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
             >
@@ -98,25 +98,20 @@ export default function Login() {
                         source={require("@assets/images/layout/backgroundPaw-3.png")}
                         resizeMode="cover"
                     />
-                </BottomPawContainer>
-            </ScrollView>
-            <FooterWrapper>
-                <Footer />
-            </FooterWrapper>
+                    </BottomPawContainer>
+            </StyledScrollView>
+            <Footer />
         </Container>
     );
 }
 
 const Container = styled.View`
     flex: 1;
+    background-color: transparent;
 `;
 
-const FooterWrapper = styled.View`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+const StyledScrollView = styled.ScrollView`
+    background-color: ${({ theme }) => theme.colors.backgroundMain};
 `;
 
 const TopPawContainer = styled.View`
@@ -144,7 +139,7 @@ const BottomPawImage = styled.Image`
 `;
 
 const FormContainer = styled.View`
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.backgroundMain};
     padding: 24px 20px;
     align-items: center;
 `;
@@ -152,7 +147,7 @@ const FormContainer = styled.View`
 const Title = styled.Text`
     font-size: 32px;
     font-weight: 600;
-    color: ${({ theme }: { theme: any }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accent};
     margin-bottom: 5%;
     font-family: sans-serif;
 `;
@@ -165,7 +160,7 @@ const RegisterLinkContainer = styled.View`
 
 const RegisterLinkText = styled.Text`
     font-size: 16px;
-    color: ${({ theme }: { theme: any }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.text};
 `;
 
 const RegisterLinkHighlight = styled(Highlight)`
