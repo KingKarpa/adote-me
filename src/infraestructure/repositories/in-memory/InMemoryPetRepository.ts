@@ -14,4 +14,8 @@ export const InMemoryPetRepository: PetRepository = {
     async getRandomPets(limit = 10) {
         return MapPets(rawPets.sort(() => Math.random() - 0.5).slice(0, limit));
     },
+
+    async findById(id: string) {
+        return MapPet(rawPets.find((pet) => pet.id === parseInt(id)));
+    },
 }

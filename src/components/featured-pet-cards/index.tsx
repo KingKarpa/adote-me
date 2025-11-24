@@ -30,7 +30,7 @@ export function FeaturedPetsCards() {
         <BackgroundStrip horizontalPadding={horizontalPadding} />
         <CardRow>
             {pets.map((pet) => (
-            <PetCard key={pet.id} pet={pet} cardWidth={cardWidth} />
+                <PetCard key={pet.id} pet={pet} cardWidth={cardWidth} />
             ))}
         </CardRow>
     </Container>

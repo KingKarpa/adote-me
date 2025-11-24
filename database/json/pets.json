@@ -6,7 +6,8 @@
       "animal": "hamster",
       "sex": "female",
       "breed": "Desconhecido",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/1.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/1.jpg",
+      "description": "Luna é uma hamster muito fofa e carinhosa. Ela adora brincar com seus brinquedos e comer frutas."
     },
     {
       "id": 2,
@@ -15,7 +16,8 @@
       "animal": "cat",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/2.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/2.jpg",
+      "description": "Nino é um gato muito fofinho e carinhoso. Ele adora brincar com seus brinquedos."
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/3.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/3.jpg",
+      "description": ""
     },
     {
       "id": 4,
@@ -33,7 +36,8 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/4.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/4.jpg",
+      "description": ""
     },
     {
       "id": 5,
@@ -42,7 +46,8 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/5.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/5.jpg",
+      "description": ""
     },
     {
       "id": 6,
@@ -51,7 +56,8 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/6.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/6.jpg",
+      "description": ""
     },
     {
       "id": 7,
@@ -60,7 +66,8 @@
       "animal": "dog",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/7.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/7.jpg",
+      "description": ""
     },
     {
       "id": 8,
@@ -69,7 +76,8 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Desconhecido",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/8.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/8.jpg",
+      "description": ""
     },
     {
       "id": 9,
@@ -78,7 +86,8 @@
       "animal": "dog",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/9.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/9.jpg",
+      "description": ""
     },
     {
       "id": 10,
@@ -87,7 +96,8 @@
       "animal": "turtle",
       "sex": "male",
       "breed": "Desconhecido",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/10.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/10.jpg",
+      "description": ""
     },
     {
       "id": 11,
@@ -96,7 +106,8 @@
       "animal": "cat",
       "sex": "male",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/11.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/11.jpg",
+      "description": ""
     },
     {
       "id": 12,
@@ -105,7 +116,8 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/12.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/12.jpg",
+      "description": ""
     },
     {
       "id": 13,
@@ -114,6 +126,7 @@
       "animal": "cat",
       "sex": "female",
       "breed": "Vira-lata",
-      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/13.jpg"
+      "image": "https://raw.githubusercontent.com/KingKarpa/adote-me/main/assets/images/profile/13.jpg",
+      "description": ""
     }
 ]
