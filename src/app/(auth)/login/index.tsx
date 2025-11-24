@@ -29,8 +29,6 @@ export default function Login() {
             return;
         }
 
-        // Se passou na validação, prosseguir com o cadastro
-        console.log("Login:", { email, senha });
         try {
             const loginUser = makeLoginUser();
             const user = await loginUser.execute(email, senha);

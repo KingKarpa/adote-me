@@ -6,7 +6,6 @@ const db: User[] = [];
 export class LocalAuthRepository implements AuthRepository {
     async register(user: User): Promise<void> {
         db.push(user);
-        console.log(db);
     }
 
     async findByEmail(email: string): Promise<User | null> {

@@ -23,7 +23,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     function updateUser(updatedUser: User) {
         setUser(updatedUser);
-        console.log(user);
     }
 
     return (

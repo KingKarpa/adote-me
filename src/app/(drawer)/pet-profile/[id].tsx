@@ -27,7 +27,10 @@ export default function Index() {
                     setPet(petData);
                 }
             } catch (error) {
-                console.error("Erro ao carregar pet:", error);
+                Alert.alert(
+                    "Erro",
+                    "Ocorreu um erro ao carregar o perfil do animal. Por favor, tente novamente."
+                );
             } finally {
                 setLoading(false);
             }

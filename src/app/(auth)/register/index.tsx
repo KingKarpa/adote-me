@@ -34,8 +34,6 @@ export default function Register() {
             return;
         }
 
-        // Se passou na validação, prosseguir com o cadastro
-        console.log("Cadastrar:", { nome, email, telefone, senha });
         try {
             const registerUser = makeRegisterUser();
             await registerUser.execute({ nome, email, telefone, senha });
