@@ -1,52 +1,63 @@
 import { FeaturedPetsCards } from "@/components/featured-pet-cards";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/navigation-footer";
-import { DarkHighlight, LightButton, LightButtonText } from "@/styles/typography";
+import { DarkHighlight, LightButton, LightButtonText } from "@styles/typography";
+import { useRouter } from "expo-router";
 import { Image, ScrollView } from "react-native";
 import styled from "styled-components/native";
 
 export default function Index() {
-  return (
-    <Container>
-      <ScrollView 
-        contentContainerStyle={{ paddingBottom: 70 }}
-        showsVerticalScrollIndicator={false}
-      >
-        <Header />
-        <BannerHomeContainer>
-            <Image 
-                source={require("@assets/images/layout/bannerHome.png")} 
-                style={{ width: "100%", height: 260, borderRadius: 5 }} 
-            />
-        </BannerHomeContainer>
-        <FeaturedPetsContainer>
-            <FeaturedPetsTitle>
-                <DarkHighlight>Adote seu Pet</DarkHighlight>
-                <LightButton>
-                    <LightButtonText>Veja Mais Animaizinhos</LightButtonText>
-                </LightButton>
-            </FeaturedPetsTitle>
-            <FeaturedPetsCards></FeaturedPetsCards>
-        </FeaturedPetsContainer>
-        <DividerLine />
-        <ContactContainer>
-            <BackgroundPawImage 
-                source={require("@assets/images/layout/backgroundPaw-1.png")}
-                resizeMode="contain"
-            />
-            <ContactCard>
-                <ContactName>Nícolas Oliveira</ContactName>
-                <ContactRole>Responsável pelo Projeto</ContactRole>
-                <PhotoPlaceholder>
-                    <PhotoText>Foto</PhotoText>
-                </PhotoPlaceholder>
-                <ContactEmail>adoteme@email.com.br</ContactEmail>
-            </ContactCard>
-        </ContactContainer>
-      </ScrollView>
-      <Footer />
-    </Container>
-  );
+    const router = useRouter();
+
+    function handleSeeMorePets() {
+        router.push({
+            pathname: "/(drawer)/adoption-list",
+        });
+    }
+
+    return (
+        <Container>
+            <ScrollView
+                contentContainerStyle={{ paddingBottom: 70 }}
+                showsVerticalScrollIndicator={false}
+            >
+                <Header />
+                <BannerHomeContainer>
+                    <Image
+                        source={require("@assets/images/layout/bannerHome.png")}
+                        style={{ width: "100%", height: 260, borderRadius: 5 }}
+                    />
+                </BannerHomeContainer>
+                <FeaturedPetsContainer>
+                    <FeaturedPetsTitle>
+                        <DarkHighlight>Adote seu Pet</DarkHighlight>
+                        <LightButton onPress={handleSeeMorePets}>
+                            <LightButtonText>
+                                Veja Mais Animaizinhos
+                            </LightButtonText>
+                        </LightButton>
+                    </FeaturedPetsTitle>
+                    <FeaturedPetsCards></FeaturedPetsCards>
+                </FeaturedPetsContainer>
+                <DividerLine />
+                <ContactContainer>
+                    <BackgroundPawImage
+                        source={require("@assets/images/layout/backgroundPaw-1.png")}
+                        resizeMode="contain"
+                    />
+                    <ContactCard>
+                        <ContactName>Nícolas Oliveira</ContactName>
+                        <ContactRole>Responsável pelo Projeto</ContactRole>
+                        <PhotoPlaceholder>
+                            <PhotoText>Foto</PhotoText>
+                        </PhotoPlaceholder>
+                        <ContactEmail>adoteme@email.com.br</ContactEmail>
+                    </ContactCard>
+                </ContactContainer>
+            </ScrollView>
+            <Footer />
+        </Container>
+    );
 }
 
 const BannerHomeContainer = styled.View`
