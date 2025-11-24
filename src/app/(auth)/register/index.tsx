@@ -1,14 +1,15 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
-import { useRouter } from "expo-router";
 import styled from "styled-components/native";
 
+import { BackButton } from "@components/back-button";
 import { Footer } from "@components/footer";
 import { FormInput } from "@components/form-input";
 import { FormSubmitButton } from "@components/form-submit-button";
+import { makeRegisterUser } from "@services/factories/RegisterUserFactory";
 import { RegisterValidationService } from "@services/validation/RegisterValidationService";
 import { Highlight } from "@styles/typography";
-import { makeRegisterUser } from "@services/factories/RegisterUserFactory";
 
 export default function Register() {
     const router = useRouter();
@@ -46,6 +47,7 @@ export default function Register() {
 
     return (
         <Container>
+            <BackButton />
             <ScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}

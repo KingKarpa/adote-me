@@ -36,7 +36,7 @@ export function Header() {
                 <Text>{logo}</Text>
             ) : (
                 <TouchableOpacity onPress={() => router.back()}>
-                    <Ionicons name="chevron-back" size={28} color="#333" />
+                    <Ionicons name="arrow-back" size={28} color="#333" />
                 </TouchableOpacity>
             )}
 

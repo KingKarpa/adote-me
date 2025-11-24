@@ -3,13 +3,14 @@ import { useState } from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 
+import { BackButton } from "@components/back-button";
 import { Footer } from "@components/footer";
 import { FormInput } from "@components/form-input";
 import { FormSubmitButton } from "@components/form-submit-button";
 import { useAuth } from "@contexts/AuthContext";
-import { Highlight } from "@styles/typography";
-import { LoginValidationService } from "@services/validation/LoginValidationService";
 import { makeLoginUser } from "@services/factories/LoginUserFactory";
+import { LoginValidationService } from "@services/validation/LoginValidationService";
+import { Highlight } from "@styles/typography";
 
 export default function Login() {
     const router = useRouter();
@@ -42,6 +43,7 @@ export default function Login() {
 
     return (
         <Container>
+            <BackButton />
             <ScrollView
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
