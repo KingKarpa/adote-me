@@ -1,3 +1,4 @@
+import { useAuth } from "@contexts/AuthContext";
 import { Ionicons } from "@expo/vector-icons";
 import { DarkButton, DarkButtonText, DarkHighlight, Highlight, Subtitle } from "@styles/typography";
 import { useRouter, useSegments } from "expo-router";
@@ -5,6 +6,7 @@ import { Text, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 
 export function Header() {
+    const { user } = useAuth();
     const segments = useSegments();
     const router = useRouter();
     const lastSegment = segments[segments.length - 1];
@@ -17,7 +19,7 @@ export function Header() {
     );
 
     const loginButton = (
-        <TouchableOpacity onPress={() => router.push("/login")}>
+        <TouchableOpacity onPress={() => router.push("/login" as any)}>
             <DarkHighlight>Entrar</DarkHighlight>
         </TouchableOpacity>
     );
@@ -38,7 +40,11 @@ export function Header() {
                 </TouchableOpacity>
             )}
 
-            {true && (
+            {user ? (
+                <TouchableOpacity onPress={() => router.push("/user-profile" as any)}>
+                    <ProfileImage source={require("@assets/icons/user-profile.png")} />
+                </TouchableOpacity>
+            ) : (
                 <ButtonsContainer>
                     {loginButton}
                     {registerButton}
@@ -62,4 +68,9 @@ const ButtonsContainer = styled.View`
     flex-direction: row;
     gap: 16px;
     align-items: center;
+`;
+
+const ProfileImage = styled.Image`
+    width: 32px;
+    height: 32px;
 `;
