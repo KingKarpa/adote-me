@@ -49,7 +49,6 @@ export default function Index() {
                         <ContactName>Nícolas Oliveira</ContactName>
                         <ContactRole>Líder do Projeto</ContactRole>
                         <PhotoPlaceholder>
-                            <PhotoText>Foto</PhotoText>
                         </PhotoPlaceholder>
                         <ContactEmail>adoteme@email.com.br</ContactEmail>
                     </ContactCard>
@@ -140,9 +139,7 @@ const ContactRole = styled.Text`
 const PhotoPlaceholder = styled.View`
     width: 100px;
     height: 100px;
-    border-radius: 60px;
-    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.secondary};
-    border: 2px solid ${({ theme }: { theme: DefaultTheme }) => theme.colors.text};
+    background-color: ${({ theme }: { theme: DefaultTheme }) => theme.colors.primary};
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
